@@ -1,0 +1,135 @@
+  <ng-container *ngIf="this.uservalue">
+  <div class="body">
+  <div class="{{ containerClass }}" id="main">
+    <div class="sign-up" >
+      <form [formGroup]="RegistrationForm" (ngSubmit)="validertousR()">
+
+        <p class="title">Créer un compte</p>
+        <div class="inputGroup">
+          <input type="text" required  id="name"  formControlName="nom">
+          <label for="name">Nom </label>
+        </div>
+        <div *ngIf="nomR?.hasError('required') && nomR?.touched && !this.GoToSeConnecterActive" class="alert left-margin">
+            Champ obligatoire !
+        </div>
+        <div *ngIf="this.nomR?.hasError('pattern')  && this.nomR?.dirty && !this.GoToSeConnecterActive " class="alert left-margin">
+          Le champ doit contenir au moins 3 lettres !
+        </div>
+
+        <div class="inputGroup">
+          <input type="text" required  id="lname" formControlName="prenom">
+          <label for="lname">Prenom  </label>
+        </div>
+        <div *ngIf="this.prenomR?.hasError('required') && this.prenomR?.touched && !this.GoToSeConnecterActive" class="alert left-margin">
+          Champ obligatoire !
+        </div>
+        <div *ngIf=" this.prenomR?.hasError('pattern')  && this.prenomR?.dirty && !this.GoToSeConnecterActive " class="alert left-margin">
+          3 lettres au minimum !
+        </div>
+        <div class="inputGroup">
+          <input type="text" required  id="emailR" formControlName="email" >
+          <label for="emailR">Email </label>
+        </div>
+        <div *ngIf="(this.emailR?.dirty )  && this.emailR?.touched && !this.GoToSeConnecterActive" class="alert left-margin">
+          Champ obligatoire !
+        </div>
+        <div *ngIf=" this.emailR?.dirty && this.emailR?.hasError('email')  && !this.GoToSeConnecterActive" class="alert left-margin">
+          Ceci n'est pas une adresse e-mail valide !
+        </div>
+
+        <div class="inputGroup">
+          <input type="password" required  id="pwdR" formControlName="pwd">
+          <label for="pwdR">Mot de passe </label>
+        </div>
+        <div *ngIf="(this.pwdR?.touched && this.pwdR?.hasError('required')) && !this.GoToSeConnecterActive" class="alert left-margin">
+          Champ obligatoire !
+        </div>
+        <div *ngIf=" this.pwdR?.hasError('pattern') && this.pwdR?.dirty  && !this.GoToSeConnecterActive" class="alert left-margin">
+          8 caractères au minimum !
+        </div>
+        
+        <div class="radio-buttons-container left-margin">
+          <div class="radio-button">
+            <input name="role" id="radio2" value="0" class="radio-button__input" type="radio" formControlName="role">
+            <label for="radio2" class="radio-button__label">
+              <span class="radio-button__custom"></span>
+                  
+                  Consommateur
+            </label>
+          </div>
+          <div class="radio-button">
+            <input name="role" id="radio1" class="radio-button__input" type="radio" formControlName="role" value="1">
+            <label for="radio1" class="radio-button__label">
+              <span class="radio-button__custom"></span>
+              
+              Vendeur
+            </label>
+          </div>
+          </div>
+        <div *ngIf="this.roleR?.value==-1 && this.Rbtnclicked  && !this.GoToSeConnecterActive" class="alert left-margin">
+          Vous devez choisir votre profil !
+        </div>
+        
+          <button type="submit" (click)="submitRclicked()" >S'inscrire</button>
+
+        </form>
+    </div>
+    <div class="sign-in">
+      <form [formGroup]="ConnexionForm"  (ngSubmit)="validertousC()">
+        <p class="title">Se connecter</p>
+        <div class="inputGroup">
+          <input type="text" id="email" required  formControlName="email" >
+          <label for="email">Email</label>
+        </div>
+        <div *ngIf="emailC?.hasError('required') && emailC?.touched && !this.GotoCreeCompteActive " class="alert left-margin">
+          Champ obligatoire !
+        </div>
+        <!-- emailC?.hasError('required') :{{emailC?.hasError('required')}}   emailC?.touched: {{emailC?.touched}}  !this.GotoCreeCompteActive  :{{!this.GotoCreeCompteActive}} -->
+        <div *ngIf=" this.emailC?.dirty && this.emailC?.hasError('email') && !this.GotoCreeCompteActive " class="alert left-margin">
+          Ceci n'est pas une adresse e-mail valide !
+        </div>
+        <!-- =============================================
+        this.emailC?.dirty {{ this.emailC?.dirty}}<br>
+        this.emailC?.hasError('email') {{this.emailC?.hasError('email')}}<br>
+        !this.GotoCreeCompteActive {{!this.GotoCreeCompteActive}} -->
+        <div class="inputGroup">
+          <input type="password" id="pwd" required  formControlName="pwd">
+          <label for="pwd">Mot de passe</label>
+        </div>
+        <div *ngIf="pwdC?.touched && pwdC?.hasError('required') && !this.GotoCreeCompteActive" class="alert left-margin">
+          Champ obligatoire !
+        </div>
+        <!-- pwdC?.touched : {{pwdC?.touched}}<br>
+        pwdC?.hasError('required') : {{pwdC?.hasError('required')}} <br>
+        !this.GotoCreeCompteActive :{{!this.GotoCreeCompteActive}}         -->
+
+        <div *ngIf=" pwdC?.hasError('pattern') && pwdC?.dirty && !this.GotoCreeCompteActive" class="alert left-margin">
+          8 caractères au minimum !
+        </div>
+        <!-- ============================================
+        pwdC?.hasError('pattern') : {{pwdC?.hasError('pattern')}} <br>
+        pwdC?.dirty : {{pwdC?.dirty}} <br>
+        !this.GotoCreeCompteActive :{{!this.GotoCreeCompteActive}} -->
+
+        <a class="left-margin">Mot de passe oublié</a>
+        <button type="submit" (click)="submitCclicked()" >Se connecter</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-left">
+          <p class="title">Bienvenue à TeknoShop !</p>
+          <p class="sous-titre">Vous avez un compte ?</p>
+          <button id="signIn" (click)="GoToSeConnecter()">Se connecter</button>
+        </div>
+        <div class="overlay-right">
+          <p class="title">Bienvenue à TeknoShop !</p>
+          <p class="sous-titre">Vous n'avez pas de compte ?</p>
+          <button id="signUp" (click)="GoToCreeCompte()">Créer compte</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</ng-container>
+

@@ -1,0 +1,70 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="offset-3 col-6">
+          <form   >
+            <h1>Parametre du compte</h1>
+            <div class="separation"></div>
+
+            <div class="corps-formulaire">
+              <h3>Modifier votre adresse e-mail</h3>
+
+              <div class="gauche">
+                <div class="groupe">
+                  <label>Email</label>
+                  <input type="email" class="form-control" placeholder="user@mail.com" name="mail"  [(ngModel)]="email"/>
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="pied-formulaire" align="left">
+                  <button type="submit" >Mettre à jour l'adresse email</button>
+                </div>
+
+                <h3>Mettre à jour vos informations personnelles</h3>
+
+                <div class="groupe">
+                  <label>Username</label>
+                  <input type="text"  name="name" class="form-control"autocomplete="off" formControlName="username" />
+                </div>
+                <div class="groupe">
+                  <label>Numéro de téléphone</label>
+                  <input type="tel"  class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" maxlength="8" formControlName="tel" />
+                </div>
+                
+                <div class="pied-formulaire" align="left">
+                  <button class="btn " type="submit">Mettre à jour les informations</button>
+                </div>
+
+                <h3>Modifier le mot de passe</h3>
+                
+
+                
+                <div class="groupe">
+                  <label>Mot de passe actuelle</label>
+                  <input type="password" class="form-control" placeholder="********" formControlName="pwd" />
+                </div>
+
+                <div class="groupe">
+                  <label>Nouveau mot de passe</label>
+                  <input type="password"   class="form-control" placeholder="********" formControlName="pwdd"/>
+                  
+                </div>
+              </div>
+              <div class="pied-formulaire" align="left">
+                <button type="submit">Mettre à jour le mot de passe</button>
+              </div>
+      
+              
+            </div>
+      
+            <div class="pied-formulaire"  id="supp" align="left">
+              <button >Supprimer compte</button>
+            </div>
+          </form>
+       
+
+</div>
+
+
+</div>
+</div>

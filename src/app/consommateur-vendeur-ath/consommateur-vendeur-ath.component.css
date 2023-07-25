@@ -1,0 +1,468 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.body {
+  margin-top: 3rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: Inter;
+  font-style: normal;
+}
+.container {
+  position: relative;
+  width: 950px;
+  /* width: 900px; */
+
+  max-width: 100%;
+   /* min-height: 670px;  */
+   min-height: 510px;
+  /* min-height: 800px; */
+  background-color: #fff;
+  border-radius: 10px;
+    overflow:hidden;
+  /* overflow:visible; */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+form {
+  margin: 1rem;
+  background: #fff;
+  color: #4B0AA6;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  /* align-items: center; */
+  gap: 0.5rem;
+}
+.sign-up , .sign-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.sign-up {
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+.sign-in {
+  width: 50%;
+  /* opacity: 0; */
+  z-index: 2;
+}
+.sign-up .title{
+  align-self: center;
+}
+.sign-in .title{
+  align-self: center;
+}
+.title{
+  font-size: 2.25rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  /* align-self: center; */
+}
+.sous-titre{
+  font-size: 1.7rem;
+  margin-top: 8px;
+}
+a {
+  /* font-size: 14px; */
+  font-size: 1rem;
+  text-decoration: none;
+  color: #446FF2;
+  cursor: pointer;
+}
+p {
+  /* font-size: 14px; */
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+/*INPUT STYLE ======================================================= input */
+
+.inputGroup {
+  /* font-family: 'Segoe UI', sans-serif; */
+  /* margin: 1em 0 1em 1em; */
+  margin-left: 1em;
+  /* max-width: 190px; */
+  /* max-width: 400px; */
+  position: relative;
+}
+
+.inputGroup input {
+  /* font-size: 100%; */
+  font-size: 1rem;
+  /* padding: 0.8em; */
+  outline: none;
+  /* margin-left: 5px; */
+  /* padding: 10px  120px 15px 21px; */
+  padding: 10px  150px 15px 21px;
+  border: 2px solid #9B0BD9;
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+
+.inputGroup label {
+  font-size: 100%;
+  /* font-size: 1rem; */
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: #9B0BD9;
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #fff;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(150, 150, 200);
+}
+
+/* alert and left margin used to make the divs and input aligned */
+.left-margin{
+  margin-left: 1rem;
+}
+.alert{
+  color: red;
+}
+
+/*RADIO STYLE ======================== classe radio jdoddd  */
+
+
+.radio-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.radio-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-button__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-button__label {
+  display: inline-block;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 1rem;
+  color: #9B0BD9;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.radio-button__custom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #9B0BD9;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.radio-button__input:checked + .radio-button__label .radio-button__custom {
+  transform: translateY(-50%) scale(0.9);
+  border: 5px solid #4c8bf5;
+  color: #4c8bf5;
+}
+
+.radio-button__input:checked + .radio-button__label {
+  color: #4c8bf5;
+}
+
+.radio-button__label:hover .radio-button__custom {
+  transform: translateY(-50%) scale(1.2);
+  border-color: #4c8bf5;
+  box-shadow: 0 0 10px #4c8bf580;
+}
+
+
+/*  */
+.overlay-right  .title{
+  margin-top: 120px;
+}
+
+.overlay-left  .title{
+  margin-top: 120px;
+}
+
+.overlay-left button{
+  margin-top: 33px;
+  font-size: 1.5rem;
+}
+
+.overlay-right button{
+  margin-top: 33px;
+  font-size: 1.5rem;
+}
+
+form button{
+  padding: 12px 68px;
+  align-self: center;
+  /* align-self: center; */
+}
+
+button {
+  color: #fff;
+  background: #6d0ff2;
+  font-size: 1.25rem;
+
+  /* font-size: 15px; */
+  /* font-weight: bold; */
+  padding: 12px 68px;
+  border-radius: 20px;
+  border: 1px solid #6d0ff2;
+  letter-spacing: 1px;
+  /* text-transform: uppercase; */
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+#signIn,
+#signUp {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+/* Sladings style =========================================== SLIDING */
+
+.container.right-panel-active .sign-in {
+  transform: translateX(100%);
+}
+
+.container.right-panel-active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  position: relative;
+  color: #fff;
+  background: #6d0ff2;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  background: linear-gradient(to right, #7293f8,  #533280);
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-left, .overlay-right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 25px;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+  margin-left: 16px;
+}
+
+
+
+
+
+/* Radio el 9domm a efaccer */
+
+/* .group-radio{
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.group-radio  label{
+  border: solid 2px #36A;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 40px;
+  align-items: center;
+}
+
+label>div{
+  width: 14px;
+  height: 14px;
+  background-color: #FFF;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.cl:checked+label>div{
+  background-color: #36A;
+  transition: all 0.3s ease;
+}
+
+.cl{
+  display: none;
+}
+.offset {
+  margin-left: 20px;
+} */
+/* les calsees radio  le9idom men gerer compte  */
+
+/* 
+.radio-button {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px;
+  position: relative;
+  align-items: center;
+}
+
+.radio-button input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #6d0ff2;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transform: translateZ(-25px);
+  transition: all 0.3s ease-in-out;
+}
+
+.radio::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked + .radio {
+  border-color: #9B0BD9;
+  transform: translateZ(0px);
+  background-color: #6C4AB6;
+}
+
+.radio-button input[type="radio"]:checked + .radio::before {
+  opacity: 1;
+} */
+
+/* hedhi mte3 class="ng-untouched ng-pristine ng-invalid" */
+/* form.ng-untouched.ng-pristine.ng-invalid{
+
+} */
+
+/* #signIn,
+#signUp {
+  background-color: transparent;
+  border: 2px solid #fff;
+} */
+
+
+/* .input{
+  flex-direction: column;
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+} */
+
+/* h1 {
+} */
+/* 
+.label-text{
+  font-weight: 500;
+  font-size: 20px;
+} */
+/* style input */
+/* input {
+  border-radius: 30px;
+  border: 1px solid #461177;
+  background: #E5E4E4;
+  padding: 15px  150px 15px 21px;
+  outline: none;
+} */

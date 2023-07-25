@@ -1,0 +1,14 @@
+.container{
+    width: 50%;
+   margin-top: 20px;
+   right: 50%;
+}
+
+@media all and (max-width: 999px) {
+ 
+    .container {
+      
+        width:100%;
+       
+    }
+}

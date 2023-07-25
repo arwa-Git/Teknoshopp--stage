@@ -1,0 +1,45 @@
+<ng-container *ngIf="this.adminvalue">   
+        <div class="body">
+        <div class="container" id="main">
+          <div class="sign-in">
+            <form [formGroup]="ConnexionForm" >
+              <p class="title">Se connecter test </p>
+              <div class="inputGroup">
+                <input type="text" id="email" required  formControlName="email" >
+                <label for="email">Email</label>
+              </div>
+              <div *ngIf="ShowConnexionAlertEmail1()" class="alert left-margin">
+                Champ obligatoire !
+              </div>
+              <div *ngIf="ShowConnexionAlertEmail2()" class="alert left-margin">
+                Ceci n'est pas une adresse e-mail valide !
+              </div>
+              <div class="inputGroup">
+                <input type="password" id="pwd" required  formControlName="pwd">
+                <label for="pwd">Mot de passe</label>
+              </div>
+              <div *ngIf="ShowConnexionAlertPwd1() " class="alert left-margin">
+                Champ obligatoire !
+              </div>
+              <div *ngIf=" ShowConnexionAlertPwd2() " class="alert left-margin">
+                8 caractères au minimum !
+              </div>
+              <a class="left-margin">Mot de passe oublié</a>
+              <button type="submit" (click)="submitCclicked()">Se connecter</button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-right">
+                <p class="title" style="margin-top: 200px;" > Bienvenue admin !</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+     
+
+</ng-container>
+

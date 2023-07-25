@@ -1,0 +1,317 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<section class="bg-color">
+    
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="policy-product">  
+      <div class="container ">
+        <div class="title">
+            <p>Produits populaires</p>
+        </div>
+        <owl-carousel-o [options]="policyOptions">
+            <ng-template carouselSlide>
+                <div class="card">
+                    <div class="card-main">
+                    <div class="label label-green">Pre-Order</div>
+                    <div class="product-container">
+                        <div class="p" (mouseover)="changeImage($event)"><img src="../../assets/phone.jpg" alt="product"></div>
+                        <div class="p"(mouseover)="changeImage($event)"><img src="../../assets/pc2.jpg" alt="product"></div>
+                        <div class="p"(mouseover)="changeImage($event)"><img src="../../assets/sm.jpg" alt="product"></div>
+                    </div>
+                    <div class="image">
+                        <img src="{{url}}" alt="image">
+                    </div>
+                    <div class="cart-line"></div>
+                    <div class="cart-item">
+                        <ul>
+                            <li><a href=""> <i class="fa fa-shopping-basket"></i></a></li>
+                            <li><a href=""> <i class="fa fa-heart"></i></a></li>
+                            <li><a href=""> <i class="fa fa-search"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="" class="see-more">see more <i class="fa fa-caret-right"></i>
+                    </a>
+                    <div class="rating">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o" ></i>
+                        <i class="fa fa-star-o" ></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p><span class="money"> De $81.00  jusqu'à $90.00    </span></p>
+                </div>
+                    
+                </div>
+            </ng-template>  
+            <ng-template carouselSlide>
+                <div class="card">
+                    <div class="card-main">
+                    <div class="label label-green">Pre-Order</div>
+                    <div class="product-container">
+                        <div class="p" (mouseover)="changeImage2($event)"><img src="../../assets/fri.jpg" alt="product"></div>
+                        <div class="p"(mouseover)="changeImage2($event)"><img src="../../assets/four.jpg" alt="product"></div>
+                        <div class="p"(mouseover)="changeImage2($event)"><img src="../../assets/lave.jpg" alt="product"></div>
+                    </div>
+                    <div class="image">
+                        <img src="{{url2}}" alt="image">
+                    </div>
+                    <div class="cart-line"></div>
+                    <div class="cart-item">
+                        <ul>
+                            <li><a href=""> <i class="fa fa-shopping-basket"></i></a></li>
+                            <li><a href=""> <i class="fa fa-heart"></i></a></li>
+                            <li><a href=""> <i class="fa fa-search"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="" class="see-more">see more <i class="fa fa-caret-right"></i></a>
+                     <div class="rating">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o" ></i>
+                        <i class="fa fa-star-o" ></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p><span class="money">De $81.00  jusqu'à $90.00  </span></p>
+                </div>
+                    
+                </div>
+            </ng-template>  
+            <ng-template carouselSlide>
+                <div class="card">
+                    <div class="card-main">
+                    <div class="label label-green">Pre-Order</div>
+                    <div class="product-container">
+                        <div class="p" (mouseover)="changeImage3($event)"><img src="../../assets/tv.jpg" alt="product"></div>
+                        <div class="p"(mouseover)="changeImage3($event)"><img src="../../assets/ordi.jpg" alt="product"></div>
+                        <div class="p"(mouseover)="changeImage3($event)"><img src="../../assets/clim.jpg" alt="product"></div>
+                    </div>
+                    <div class="image">
+                        <img src="{{url3}}" alt="image">
+                    </div>
+                    <div class="cart-line"></div>
+                    <div class="cart-item">
+                        <ul>
+                            <li><a href=""> <i class="fa fa-shopping-basket"></i></a></li>
+                            <li><a href=""> <i class="fa fa-heart"></i></a></li>
+                            <li><a href=""> <i class="fa fa-search"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="" class="see-more">see more <i class="fa fa-caret-right"></i></a>
+                    <div class="rating">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o" ></i>
+                        <i class="fa fa-star-o" ></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p><span class="money">De $81.00  jusqu'à $90.00 </span></p>
+                </div>
+                    
+                </div>
+            </ng-template>  
+            <ng-template carouselSlide>
+                <div class="card">
+                    <div class="card-main">
+                    <div class="label label-green">Pre-Order</div>
+                    <div class="product-container">
+                        <div class="p" (mouseover)="changeImage($event)"><img src="../../assets/phone.jpg" alt="product"></div>
+                        <div class="p"(mouseover)="changeImage($event)"><img src="../../assets/pc2.jpg" alt="product"></div>
+                        <div class="p"(mouseover)="changeImage($event)"><img src="../../assets/sm.jpg" alt="product"></div>
+                    </div>
+                    <div class="image">
+                        <img src="{{url}}" alt="image">
+                    </div>
+                    <div class="cart-line"></div>
+                    <div class="cart-item">
+                        <ul>
+                            <li><a href=""> <i class="fa fa-shopping-basket"></i></a></li>
+                            <li><a href=""> <i class="fa fa-heart"></i></a></li>
+                            <li><a href=""> <i class="fa fa-search"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="" class="see-more">see more <i class="fa fa-caret-right"></i>
+                    </a>
+                    <div class="rating">
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o" ></i>
+                        <i class="fa fa-star-o" ></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p><span class="money"> De $81.00  jusqu'à $90.00    </span></p>
+                </div>
+                    
+                </div>
+            </ng-template>  
+          </owl-carousel-o>
+    </div>
+</div>
+
+</section>
+
+<section class="comment"> 
+   
+
+  <div class="container" >
+    
+    <h1 class="heading">Client's comment</h1>
+      <owl-carousel-o [options]="policyOptions">
+        
+        <ng-template carouselSlide>
+          
+                <div class="card">
+                <img src="../../assets/color.png" alt="card background" class="card-img">
+                <img src="../../assets/user-286.png" alt="profile image" class="profile-img">
+                <h1>User name</h1>
+                <p class="about">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Qui optio, fuga assumenda voluptatem, 
+                explicabo dolore commodi possimus, ad repellat numquam quod velit eum esse facere illum tempora soluta ratione aspernatur.
+              </p>
+              
+            </div>
+          </ng-template> 
+
+          <ng-template carouselSlide>
+            <div class="card">
+            <img src="../../assets/color.png" alt="card background" class="card-img">
+            <img src="../../assets/user-286.png" alt="profile image" class="profile-img">
+            <h1>User name</h1>
+            <p class="about">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Qui optio, fuga assumenda voluptatem, 
+            explicabo dolore commodi possimus, ad repellat numquam quod velit eum esse facere illum tempora soluta ratione aspernatur.
+          </p>
+         
+        </div>
+      </ng-template>
+
+
+      <ng-template carouselSlide>
+        <div class="card">
+        <img src="../../assets/color.png" alt="card background" class="card-img">
+        <img src="../../assets/user-286.png" alt="profile image" class="profile-img">
+        <h1>User name</h1>
+        <p class="about">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Qui optio, fuga assumenda voluptatem, 
+        explicabo dolore commodi possimus, ad repellat numquam quod velit eum esse facere illum tempora soluta ratione aspernatur.
+      </p>
+      
+    </div>
+  </ng-template>
+
+
+
+     
+  </owl-carousel-o>
+
+    
+  </div>
+  
+</section>
+
+<section class="footer-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="footer-logo">
+          <img src="" alt="footer-logo">
+        </div>
+        <div class="footer-top-menu">
+          <ul>
+            <li>
+              <i class="fa fa-home"> </i>
+              <span class="heading">Adress</span>
+              <span class="address">71 Av. Jean Jaurès, Tunis</span>
+
+
+            </li>
+            <li>
+              <i class="fa fa-envelope">  </i>
+                <span class="heading"> Mail  </span>
+                <span class="email">
+                  <a href="mailto:exemple@gmail.com"> teknoshop@gmail.com</a>
+                </span>
+
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>
+              <span class="heading">Phone :</span>
+              <span class="number">
+                <a href="tel:1-888-345-6799">+216 27 452 919</a>
+              </span>
+            </li>
+            </ul>
+            </div>
+              <p id="contact-us"> Retrouvez nous sur</p>
+            <div class="social">
+              <ul class="social-media">
+                <li><a href="#"> <i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"> <i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="#"> <i class="fab fa-instagram-square"></i></a></li>
+                <li><a href="#"> <i class="fab fa-google-plus-square"></i></a></li>
+      
+              </ul>
+
+            </div>
+            
+            
+          
+        
+      </div>
+      <div class="col-md-3">
+        <div class="footer-all-menu">
+          <h2>Tekno Shop</h2>
+          <ul>
+            <li> 
+              <i class="fa fa-circle"></i>
+              <a href=""> About Us</a>
+              <p>TeknoShop est site de comparateur de prix des produits électroniques : les téléphones, les ordinateurs, les téléviseurs, les appareils photo ... ,
+                   et appareils électroménagers : les réfrigérateurs, les machines à laver, les cuisinières, les aspirateurs ... .</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="footer-all-menu">
+          <h2>Information</h2>
+          <ul>
+            <li> 
+              <i class="fa fa-circle"></i>
+              <a href=""> Our partners</a>
+            </li>
+            <li> 
+              <i class="fa fa-circle"></i>
+              <a href=""> Our Categories </a>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2">
+       <button id="sign-in-admin">Sign in</button>
+      </div>
+
+    </div>
+  </div>
+  
+</section>
+<footer>
+  <div class="containers text-center">
+    <p> Copyright @ 2023  Teknoshop</p>
+  </div>
+</footer>
